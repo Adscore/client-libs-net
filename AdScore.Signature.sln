@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdScore.Signature", "AdScore.Signature.csproj", "{B3C2D7CD-CC89-4CA4-9395-723F489D3052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdScore.Signature", "src/AdScore.Signature.csproj", "{B3C2D7CD-CC89-4CA4-9395-723F489D3052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
