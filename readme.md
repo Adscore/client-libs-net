@@ -14,7 +14,11 @@ Various .NET Client libraries for utilization of APIs in <a href="https://adscor
 
 <h3> Installation </h3>
 
-TODO NUGET
+Currently .nuget file need to be downloaded from releases and provided from local "Packages Folder"
+
+https://docs.microsoft.com/pl-pl/nuget/consume-packages/install-use-packages-visual-studio#package-sources
+
+https://docs.microsoft.com/pl-pl/nuget/reference/nuget-config-file
 
 <h3> Compatibility </h3>
 
@@ -24,10 +28,6 @@ TODO NUGET
 
 https://docs.microsoft.com/pl-pl/dotnet/standard/net-standard
 
-
-<h3>How to build library manually</h3>
-
-TODO
 
 <h2> Features documentation </h2>
 
