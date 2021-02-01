@@ -32,34 +32,30 @@ namespace AdScore.Signature
           {"9", "bot"}
         };
 
-        /**
-         * @param signature the string which we want to verify
-         * @param userAgent string with full description of user agent like 'Mozilla/5.0 (Linux; Android
-         *     9; SM-J530F)...'
-         * @param signRole string which specifies if we operate in customer or master role. For AdScore
-         *     customers this should be always set to 'customer'
-         * @param key string containing related zone key
-         * @param ipAddresses array of strings containing ip4 or ip6 addresses against which we check
-         *     signature
-         * @return VerificationResult
-         */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signature">the string which we want to verify</param>
+        /// <param name="userAgent">string with full description of user agent like 'Mozilla/5.0 (Linux; Android 9; SM-J530F)...'</param>
+        /// <param name="signRole">string which specifies if we operate in customer or master role. For AdScore customers this should be always set to 'customer'</param>
+        /// <param name="key">string containing related zone key</param>
+        /// <param name="ipAddresses">array of strings containing ip4 or ip6 addresses against which we check signature</param>
+        /// <returns></returns>
         public static SignatureVerificationResult Verify(string signature, string userAgent, string signRole, string key, params string[] ipAddresses)
         {
             return SignatureVerifier.Verify(signature, userAgent, signRole, key, true, null, ipAddresses);
         }
 
-        ///
-        /// @param signature the string which we want to verify
-        /// @param userAgent string with full description of user agent like 'Mozilla/5.0 (Linux; Android
-        ///     9; SM-J530F)...'
-        /// @param signRole string which specifies if we operate in customer or master role. For AdScore
-        ///     customers this should be always set to 'customer'
-        /// @param key string containing related zone key
-        /// @param ipAddresses array of strings containing ip4 or ip6 addresses against which we check
-        ///     signature
-        /// @param expiry number which is time in seconds. IF signatureTime + expiry > CurrentDateInSeconds
-        ///     THEN result is expired
-        /// @return VerificationResult
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signature">the string which we want to verify</param>
+        /// <param name="userAgent">string with full description of user agent like 'Mozilla/5.0 (Linux; Android 9; SM-J530F)...'</param>
+        /// <param name="signRole">string which specifies if we operate in customer or master role. For AdScore customers this should be always set to 'customer'</param>
+        /// <param name="key">string containing related zone key</param>
+        /// <param name="expiry">Unix timestamp which is time in seconds. IF signatureTime + expiry > CurrentDateInSecondsTHEN result is expired</param>
+        /// <param name="ipAddresses">array of strings containing ip4 or ip6 addresses against which we check signature</param>
+        /// <returns></returns>
         public static SignatureVerificationResult Verify(
             string signature,
             string userAgent,
@@ -72,18 +68,16 @@ namespace AdScore.Signature
             return SignatureVerifier.Verify(signature, userAgent, signRole, key, true, expiry, ipAddresses);
         }
 
-        /**
-         * @param signature the string which we want to verify
-         * @param userAgent string with full description of user agent like 'Mozilla/5.0 (Linux; Android
-         *     9; SM-J530F)...'
-         * @param signRole string which specifies if we operate in customer or master role. For AdScore
-         *     customers this should be always set to 'customer'
-         * @param key string containing related zone key
-         * @param ipAddresses array of strings containing ip4 or ip6 addresses against which we check
-         *     signature
-         * @param isKeyBase64Encoded bool defining if passed key is base64 encoded or not
-         * @return VerificationResult
-         */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signature">the string which we want to verify</param>
+        /// <param name="userAgent">string with full description of user agent like 'Mozilla/5.0 (Linux; Android 9; SM-J530F)...'</param>
+        /// <param name="signRole">string which specifies if we operate in customer or master role. For AdScore customers this should be always set to 'customer'</param>
+        /// <param name="key">string containing related zone key</param>
+        /// <param name="isKeyBase64Encoded">defining if passed key is base64 encoded or not</param>
+        /// <param name="ipAddresses">array of strings containing ip4 or ip6 addresses against which we check signature</param>
+        /// <returns></returns>
         public static SignatureVerificationResult Verify(
             string signature,
             string userAgent,
@@ -97,20 +91,17 @@ namespace AdScore.Signature
                 signature, userAgent, signRole, key, isKeyBase64Encoded, null, ipAddresses);
         }
 
-        /**
-         * @param signature the string which we want to verify
-         * @param userAgent string with full description of user agent like 'Mozilla/5.0 (Linux; Android
-         *     9; SM-J530F)...'
-         * @param signRole string which specifies if we operate in customer or master role. For AdScore
-         *     customers this should be always set to 'customer'
-         * @param key string containing related zone key
-         * @param ipAddresses array of strings containing ip4 or ip6 addresses against which we check
-         *     signature
-         * @param expiry number which is time in seconds. IF signatureTime + expiry > CurrentDateInSeconds
-         *     THEN result is expired
-         * @param isKeyBase64Encoded bool defining if passed key is base64 encoded or not
-         * @return VerificationResult
-         */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signature">the string which we want to verify</param>
+        /// <param name="userAgent">string with full description of user agent like 'Mozilla/5.0 (Linux; Android 9; SM-J530F)...'</param>
+        /// <param name="signRole">string which specifies if we operate in customer or master role. For AdScore customers this should be always set to 'customer'</param>
+        /// <param name="key">string containing related zone key</param>
+        /// <param name="isKeyBase64Encoded">defining if passed key is base64 encoded or not</param>
+        /// <param name="expiry">Unix timestamp which is time in seconds. IF signatureTime + expiry > CurrentDateInSeconds THEN result is expired</param>
+        /// <param name="ipAddresses">array of strings containing ip4 or ip6 addresses against which we check signature</param>
+        /// <returns></returns>
         public static SignatureVerificationResult Verify(
             string signature,
             string userAgent,
@@ -205,7 +196,7 @@ namespace AdScore.Signature
 
                                 if (isHashedDataEqualToToken)
                                 {
-                                    if (expiry != null && GeneralUtils.CharacterToInt(data["signatureTime"]) + expiry < GeneralUtils.UnixTimestamp / 1000) // TODO: unix timestamp, why / 1000 ??
+                                    if (expiry != null && GeneralUtils.CharacterToInt(data["signatureTime"]) + expiry < GeneralUtils.UnixTimestamp / 1000)
                                     {
                                         validationResult.Expired = true;
                                         return validationResult;
@@ -251,12 +242,11 @@ namespace AdScore.Signature
             }
         }
 
-        // internals
-
-        /**
-         * @param key in base64 format
-         * @return decoded key
-         */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key">in base64 format</param>
+        /// <returns>decoded key</returns>
         internal static string KeyDecode(string key)
         {
             return Atob(key);
@@ -314,7 +304,13 @@ namespace AdScore.Signature
             return Atob(data.Replace('_', '/').Replace('-', '+'));
         }
 
-        // TODO: throws SignatureVerificationException
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="format"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        /// <exception cref="SignatureVerificationException"></exception>
         private static Dictionary<string, Object> Unpack(string format, string data)
         {
             int formatPointer = 0;
@@ -447,7 +443,12 @@ namespace AdScore.Signature
             return matches.Count > 0;
         }
 
-        // TODO: throws BaseSignatureVerificationException
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signature"></param>
+        /// <returns></returns>
+        /// <exception cref="BaseSignatureVerificationException"></exception>
         private static Dictionary<string, Object> Parse3(string signature)
         {
             signature = FromBase64(signature);
@@ -517,7 +518,12 @@ namespace AdScore.Signature
             return new Field(resultName, resultType);
         }
 
-        // TODO: throws BaseSignatureVerificationException
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signature"></param>
+        /// <returns></returns>
+        /// <exception cref="BaseSignatureVerificationException"></exception>
         private static Dictionary<string, Object> Parse4(string signature)
 
         {
