@@ -1,18 +1,16 @@
-<h1>What is it?</h1>
+# What is it?
 
-Various .NET Client libraries for utilization of APIs in <a href="https://adscore.com">AdScore.com</a>
+Various .NET Client libraries for utilization of APIs in [AdScore.com](https://adscore.com")
 
-<h5> Latest version: 1.0.0 - currently available features: </h5>
+##### Latest version: 1.0.0 - currently available features:
 1. SignatureVerifier
 
-<h5> other languages: <h5>
-<ul>
- <li> PHP: https://github.com/Adscore/client-libs-php </li>
- <li> JS: https://github.com/variably/adscore-node </li>
- <li> Java: https://github.com/Adscore/client-libs-java </li>
-</ul>
+##### other languages:
+ * PHP: https://github.com/Adscore/client-libs-php
+ * JS: https://github.com/variably/adscore-node
+ * Java: https://github.com/Adscore/client-libs-java
 
-<h3> Installation </h3>
+### Installation
 
 Currently .nuget file need to be downloaded from releases and provided from local "Packages Folder"
 
@@ -20,18 +18,18 @@ https://docs.microsoft.com/pl-pl/nuget/consume-packages/install-use-packages-vis
 
 https://docs.microsoft.com/pl-pl/nuget/reference/nuget-config-file
 
-<h3> Compatibility </h3>
+### Compatibility
 
-|AdScore SignatureVerifier Version|.NET Standard|
-|----------|----------|
+|AdScore SignatureVerifier Version                 |.NET Standard|
+|---------------------------------------------------|------|
 |[1.0.0](https://github.com/Adscore/client-libs-net)|>= 1.6|
 
 https://docs.microsoft.com/pl-pl/dotnet/standard/net-standard
 
 
-<h2> Features documentation </h2>
+## Features documentation
 
-<h3>1. SignatureVerifier</h3>
+### 1. SignatureVerifier
 
 The definition of verify function looks as follows:
 
