@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>AdScore.Signature</PackageId>
+    <Version>1.0.1</Version>
     <TargetFramework>netstandard1.6</TargetFramework>
     <RootNamespace>AdScore.Signature</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
