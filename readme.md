@@ -12,7 +12,11 @@ Various .NET Client libraries for utilization of APIs in [AdScore.com](https://a
 
 ### Installation
 
-Currently .nuget file need to be downloaded from releases and provided from local "Packages Folder"
+```
+Install-Package AdScore.Signature -Version 1.0.0
+```
+
+Or by downloading .nuget file need from releases and provided from local "Packages Folder"
 
 https://docs.microsoft.com/pl-pl/nuget/consume-packages/install-use-packages-visual-studio#package-sources
 
