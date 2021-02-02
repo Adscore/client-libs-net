@@ -1,6 +1,6 @@
 # What is it?
 
-Various .NET Client libraries for utilization of APIs in [AdScore.com](https://adscore.com")
+Various .NET Client libraries for utilization of APIs in [AdScore.com](https://adscore.com)
 
 ##### Latest version: 1.0.0 - currently available features:
 1. SignatureVerifier
