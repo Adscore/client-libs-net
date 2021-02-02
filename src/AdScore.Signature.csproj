@@ -6,8 +6,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Company>Adscore Technologies DMCC</Company>
-    <Authors />
-    <Product></Product>
+    <Authors>Adscore Technologies DMCC</Authors>
+    <Product>Adscore Client Libraries</Product>
+    <Description>Package containing libraries facilitating using of AdScore.com APIs</Description>
+    <RepositoryUrl>https://github.com/Adscore/client-libs-net</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
