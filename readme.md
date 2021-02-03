@@ -2,7 +2,7 @@
 
 Various .NET Client libraries for utilization of APIs in [AdScore.com](https://adscore.com")
 
-##### Latest version: 1.0.0 - currently available features:
+##### Latest version: 1.0.1 - currently available features:
 1. SignatureVerifier
 
 ##### other languages:
@@ -13,7 +13,7 @@ Various .NET Client libraries for utilization of APIs in [AdScore.com](https://a
 ### Installation
 
 ```
-Install-Package AdScore.Signature -Version 1.0.0
+Install-Package AdScore.Signature -Version 1.0.1
 ```
 
 Or by downloading .nuget file need from releases and provided from local "Packages Folder"
@@ -27,6 +27,7 @@ https://docs.microsoft.com/pl-pl/nuget/reference/nuget-config-file
 |AdScore SignatureVerifier Version                 |.NET Standard|
 |---------------------------------------------------|------|
 |[1.0.0](https://github.com/Adscore/client-libs-net)|>= 1.6|
+|[1.0.1](https://github.com/Adscore/client-libs-net)|>= 1.6|
 
 https://docs.microsoft.com/pl-pl/dotnet/standard/net-standard
 
