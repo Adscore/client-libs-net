@@ -33,6 +33,10 @@ https://docs.microsoft.com/pl-pl/nuget/reference/nuget-config-file
 https://docs.microsoft.com/pl-pl/dotnet/standard/net-standard
 
 
+## Examples
+
+Usage example is available in `./sample/ExampleApp`
+
 ## Features documentation
 
 ### 1. SignatureVerifier
