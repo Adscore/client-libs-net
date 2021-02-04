@@ -257,7 +257,7 @@ namespace AdScore.Signature
 
                 if (exp.Message.StartsWith(base64Exception))
                 {
-                    validationResult.Error = exp.Message.Replace(base64Exception, "Key is not a valid Base-64 string");
+                    validationResult.Error = exp.Message.Replace(base64Exception, "Key/Signature is not a valid Base-64 string");
                     return validationResult;
                 }
                 else
@@ -321,6 +321,11 @@ namespace AdScore.Signature
 
         private static string FromBase64(string data)
         {
+            if (string.IsNullOrWhiteSpace(data))
+            {
+                throw new SignatureVerificationException("empty key or signature");
+            }
+
             int mod4 = data.Length % 4;
             if (mod4 > 0)
             {
