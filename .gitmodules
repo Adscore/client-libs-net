@@ -1,0 +1,3 @@
+[submodule "submodules/client-libs-net-samples"]
+	path = submodules/client-libs-net-samples
+	url = git@github.com:Adscore/client-libs-net-samples.git

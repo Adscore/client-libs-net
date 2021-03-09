@@ -2,7 +2,7 @@
 
 Various .NET Client libraries for utilization of APIs in [AdScore.com](https://adscore.com)
 
-##### Latest version: 1.0.2 - currently available features:
+##### Latest version: 1.1.0 - currently available features:
 1. SignatureVerifier
 
 ##### other languages:
@@ -13,7 +13,7 @@ Various .NET Client libraries for utilization of APIs in [AdScore.com](https://a
 ### Installation
 
 ```
-Install-Package AdScore.Signature -Version 1.0.2
+Install-Package AdScore.Signature -Version 1.1.0
 ```
 
 Or by downloading .nuget file need from releases and provided from local "Packages Folder"
@@ -26,16 +26,28 @@ https://docs.microsoft.com/pl-pl/nuget/reference/nuget-config-file
 
 |AdScore SignatureVerifier Version                 |.NET Standard|
 |---------------------------------------------------|------|
-|[1.0.0](https://github.com/Adscore/client-libs-net)|>= 1.6|
-|[1.0.1](https://github.com/Adscore/client-libs-net)|>= 1.6|
-|[1.0.2](https://github.com/Adscore/client-libs-net)|>= 1.6|
+|[1.0.0](https://github.com/Adscore/client-libs-net/tree/1.0.0)|>= 1.6|
+|[1.0.1](https://github.com/Adscore/client-libs-net/tree/v1.0.1)|>= 1.6|
+|[1.0.2](https://github.com/Adscore/client-libs-net/tree/v1.0.2)|>= 1.6|
+|[1.1.0](https://github.com/Adscore/client-libs-net)|>= 1.6|
 
 https://docs.microsoft.com/pl-pl/dotnet/standard/net-standard
 
 
 ## Examples
 
-Usage example is available in `./sample/ExampleApp`
+Below is quick example of how to use a verifier.
+
+To get the client-libs-net-sample project as submodule execute e.g.
+```
+git submodule init && git pull --recurse-submodules && git submodule update --remote
+```
+or clone it as a separate repository:
+```
+git clone https://github.com/Adscore/client-libs-net-samples 
+```
+
+Then check `submodules/client-libs-net-samples/readme.md`, there is info on how to execute sample.
 
 ## Features documentation
 
@@ -88,10 +100,8 @@ then you have at least few options of how to verify signatures:
 
     [..]
 
-    // Verify with checking if expired and non base64 encoded key
-    //
-    // IF signatureTime + expiry > CurrentDateInSeconds
-    // THEN result.getExpired() = true
+    // Verify with base64 encoded key.
+    // (No expiry parameter, the default expiry time for requestTime and signatureTime is 60s)
     result =
         SignatureVerifier.Verify(
             "BAYAXlNKGQFeU0oggAGBAcAAIAUdn1gbCBmA-u-kF--oUSuFw4B93piWC1Dn-D_1_6gywQAgEXCqgk2zPD6hWI1Y2rlrtV-21eIYBsms0odUEXNbRbA",
@@ -103,7 +113,7 @@ then you have at least few options of how to verify signatures:
             "73.109.57.137");
     [..]
 
-    // Verify against number of ip4 and ip6 addresses
+    //(No expiry parameter, the default expiry time for requestTime and signatureTime is 60s)
     result =
         SignatureVerifier.Verify(
             "BAYAXlNKGQFeU0oggAGBAcAAIAUdn1gbCBmA-u-kF--oUSuFw4B93piWC1Dn-D_1_6gywQAgEXCqgk2zPD6hWI1Y2rlrtV-21eIYBsms0odUEXNbRbA",
